@@ -19,7 +19,7 @@ void main() {
   setUp(() {
     datasource = ShortUrlDatasourceMock();
     hiveMethods = HiveMethodsMock();
-    Get.lazyPut<IShortUrlDatasource>(() => ShortUrlDatasourceImpl());
+    Get.lazyPut<IShortUrlDatasource>(() => datasource);
     Get.lazyPut<IShortUrlRepository>(() => ShortUrlRepositoryImpl(Get.find()));
     Get.lazyPut<IShortUrl>(() => ShortUrlImpl(Get.find()));
     Get.lazyPut<IHiveMethodsDatasource>(() => HiveMethodsDatasourceImpl());

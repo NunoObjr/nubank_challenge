@@ -10,7 +10,6 @@ class MainController extends GetxController with StateMixin<List<UrlResponse>> {
   IShortUrl shortUrlUsecase;
   IHiveMethods hiveMethods;
   final urlText = TextEditingController();
-
   @override
   void onInit() {
     change(resultUrl, status: RxStatus.loading());
