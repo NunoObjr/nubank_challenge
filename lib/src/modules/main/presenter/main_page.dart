@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer/shimmer.dart';
@@ -37,7 +36,7 @@ class MainPage extends GetView<MainController> {
                   baseColor: Colors.grey[300]!,
                   highlightColor: Colors.grey[100]!,
                 ),
-                onError: (error)=>Text(controller.error!.description!)
+                onError: (error)=>Text(controller.error!.description ?? MainPageConstants.randomError)
               ),
               )
             ],
